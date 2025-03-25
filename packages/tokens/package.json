@@ -1,0 +1,27 @@
+{
+  "name": "@supersummary-ui/tokens",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "vitest": "^3.0.9"
+  },
+  "keywords": [],
+  "author": "",
+  "description": ""
+}
