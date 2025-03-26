@@ -13,8 +13,5 @@
       "supersummary-tokens": ["../tokens/src"]
     }
   },
-  "include": ["src"],
-  "references": [
-    { "path": "../tokens" }
-  ]
+  "include": ["src"]
 } 
