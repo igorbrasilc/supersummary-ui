@@ -12,9 +12,9 @@
     "test": "echo \"No tests needed for documentation package\" && exit 0"
   },
   "dependencies": {
-    "supersummary-react": "workspace:*",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "supersummary-react": "workspace:*"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.0.0",
@@ -24,11 +24,15 @@
     "@storybook/react": "^8.0.0",
     "@storybook/react-vite": "^8.0.0",
     "@storybook/test": "^8.0.0",
-    "@vitejs/plugin-react": "^4.2.0",
-    "storybook": "^8.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "storybook": "^8.0.0",
     "typescript": "^5.0.0",
+    "typescript-eslint": "^8.28.0",
     "vite": "^5.0.0"
   },
   "eslintConfig": {
