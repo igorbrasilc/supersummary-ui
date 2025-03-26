@@ -7,10 +7,14 @@
     "strict": true,
     "declaration": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "@supersummary-ui/*": ["../*/src"]
+      "supersummary-tokens": ["../tokens/src"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "references": [
+    { "path": "../tokens" }
+  ]
 } 

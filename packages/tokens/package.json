@@ -20,7 +20,8 @@
   },
   "devDependencies": {
     "tsup": "^8.0.2",
-    "vitest": "^3.0.9"
+    "vitest": "^3.0.9",
+    "typescript": "^5.0.0"
   },
   "keywords": [],
   "author": "",
