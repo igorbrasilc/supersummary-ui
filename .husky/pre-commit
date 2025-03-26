@@ -3,4 +3,4 @@
 
 npx lint-staged --allow-empty
 pnpm eslint packages/react --ext .js,.jsx,.ts,.tsx
-pnpm test
+pnpm test -- --coverage --coverage.lines=80 --coverage.functions=80 --coverage.branches=70 --coverage.statements=80
