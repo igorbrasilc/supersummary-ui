@@ -1,7 +1,7 @@
 {
   "name": "supersummary-docs",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.1.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -12,6 +12,9 @@
     "test": "echo \"No tests needed for documentation package\" && exit 0"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/styled-engine": "^7.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "supersummary-react": "workspace:*"
