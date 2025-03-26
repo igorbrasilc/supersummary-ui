@@ -1,4 +1,4 @@
-.PHONY: install build dev test storybook lint clean changeset version publish test-coverage release
+.PHONY: install build dev test storybook lint clean changeset version publish test-coverage release test-watch
 
 # Install dependencies
 install:
@@ -15,6 +15,10 @@ dev:
 # Run tests across all packages
 test:
 	pnpm test
+
+# Run tests in watch mode
+test-watch:
+	pnpm test:watch
 
 # Run tests with coverage report
 test-coverage:
@@ -59,6 +63,10 @@ build-pkg:
 # Test a specific package (usage: make test-pkg PKG=react)
 test-pkg:
 	pnpm --filter @supersummary-ui/${PKG} test
+
+# Run tests in watch mode for a specific package (usage: make test-watch-pkg PKG=react)
+test-watch-pkg:
+	pnpm --filter @supersummary-ui/${PKG} test:watch
 
 # Run test coverage for a specific package (usage: make test-coverage-pkg PKG=react)
 test-coverage-pkg:

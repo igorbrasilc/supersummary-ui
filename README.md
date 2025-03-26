@@ -30,6 +30,30 @@ function App() {
 }
 ```
 
+## Testing
+
+```bash
+# Run all tests (non-watch mode)
+pnpm test
+# or
+make test
+
+# Run tests in watch mode
+pnpm test:watch
+# or
+make test-watch
+
+# Run tests with coverage
+pnpm test -- --coverage
+# or
+make test-coverage
+
+# Test a specific package
+pnpm --filter @supersummary-ui/react test
+# or
+make test-pkg PKG=react
+```
+
 ## Publishing to NPM
 
 ### Manual Publishing

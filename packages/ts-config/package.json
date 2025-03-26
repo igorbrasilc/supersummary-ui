@@ -1,12 +1,17 @@
 {
-  "name": "ts-config",
+  "name": "@supersummary-ui/ts-config",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No tests needed for TypeScript configuration package\" && exit 0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "MIT",
+  "description": "TypeScript configurations for SuperSummary UI packages",
+  "files": [
+    "base.json",
+    "react.json",
+    "node.json"
+  ]
 }

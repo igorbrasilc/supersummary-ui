@@ -8,7 +8,8 @@
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build": "storybook build"
+    "build": "storybook build",
+    "test": "echo \"No tests needed for documentation package\" && exit 0"
   },
   "dependencies": {
     "@supersummary-ui/react": "workspace:*",
