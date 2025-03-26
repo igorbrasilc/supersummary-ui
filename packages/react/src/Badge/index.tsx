@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { BadgeProps } from './interfaces'
-import { tokens } from '@supersummary-ui/tokens'
+import { tokens } from 'supersummary-tokens'
 import './styles.css'
 
 export const Badge = ({ children, variant = 'primary' }: BadgeProps) => {

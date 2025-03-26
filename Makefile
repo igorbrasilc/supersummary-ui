@@ -26,7 +26,7 @@ test-coverage:
 
 # Run Storybook documentation
 storybook:
-	pnpm --filter @supersummary-ui/docs dev
+	pnpm --filter supersummary-docs dev
 
 # Run linting
 lint:
@@ -58,20 +58,20 @@ release:
 
 # Build a specific package (usage: make build-pkg PKG=react)
 build-pkg:
-	pnpm --filter @supersummary-ui/${PKG} build
+	pnpm --filter supersummary-${PKG} build
 
 # Test a specific package (usage: make test-pkg PKG=react)
 test-pkg:
-	pnpm --filter @supersummary-ui/${PKG} test
+	pnpm --filter supersummary-${PKG} test
 
 # Run tests in watch mode for a specific package (usage: make test-watch-pkg PKG=react)
 test-watch-pkg:
-	pnpm --filter @supersummary-ui/${PKG} test:watch
+	pnpm --filter supersummary-${PKG} test:watch
 
 # Run test coverage for a specific package (usage: make test-coverage-pkg PKG=react)
 test-coverage-pkg:
-	pnpm --filter @supersummary-ui/${PKG} test -- --coverage
+	pnpm --filter supersummary-${PKG} test -- --coverage
 
 # Development for a specific package (usage: make dev-pkg PKG=react)
 dev-pkg:
-	pnpm --filter @supersummary-ui/${PKG} dev 
+	pnpm --filter supersummary-${PKG} dev 

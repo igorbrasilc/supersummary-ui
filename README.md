@@ -2,23 +2,35 @@
 
 SuperSummary UI is a comprehensive React component library built with modern technologies. This library follows a monorepo structure using PNPM workspaces to manage multiple packages.
 
+## Published Packages
+
+The following packages are published to npm:
+
+- **supersummary-react**: The main React component library
+- **supersummary-tokens**: Design tokens for styling and theming
+
+Internal packages not published to npm:
+
+- **supersummary-ts-config**: Shared TypeScript configurations
+- **supersummary-docs**: Documentation and Storybook site
+
 ## Installation
 
 ```bash
 # With npm
-npm install @supersummary-ui/react
+npm install supersummary-react
 
 # With yarn
-yarn add @supersummary-ui/react
+yarn add supersummary-react
 
 # With pnpm
-pnpm add @supersummary-ui/react
+pnpm add supersummary-react
 ```
 
 ## Quick Start
 
 ```tsx
-import { Button, Badge } from '@supersummary-ui/react';
+import { Button, Badge } from 'supersummary-react';
 
 function App() {
   return (
@@ -54,39 +66,9 @@ pnpm --filter @supersummary-ui/react test
 make test-pkg PKG=react
 ```
 
-## Publishing to NPM
-
-### Manual Publishing
-
-1. **Authenticate with NPM**:
-   ```bash
-   npm login
-   ```
-
-2. **Create a changeset**:
-   ```bash
-   pnpm changeset
-   # or
-   make changeset
-   ```
-
-3. **Version packages**:
-   ```bash
-   pnpm changeset version
-   # or
-   make version
-   ```
-
-4. **Publish packages**:
-   ```bash
-   pnpm build
-   pnpm changeset publish
-   # or
-   make publish
-   ```
-
 ### GitHub Actions Automated Publishing
 
+//TODO: create a workflow for a branch homolog (that should be merged before going to prod) 
 This repository is configured with GitHub Actions for automated releases:
 
 1. When changes are pushed to the `main` branch, the release workflow runs

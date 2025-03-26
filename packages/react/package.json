@@ -1,5 +1,5 @@
 {
-  "name": "@supersummary-ui/react",
+  "name": "supersummary-react",
   "version": "1.1.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -32,6 +32,6 @@
     "jsdom": "^26.0.0"
   },
   "dependencies": {
-    "@supersummary-ui/tokens": "workspace:*"
+    "supersummary-tokens": "workspace:*"
   }
 }

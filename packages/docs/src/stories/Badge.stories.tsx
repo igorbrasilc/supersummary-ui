@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Badge } from '@supersummary-ui/react';
+import { Badge } from 'supersummary-react';
 
 const meta: Meta<typeof Badge> = {
   title: 'Components/Badge',

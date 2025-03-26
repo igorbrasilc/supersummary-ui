@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { ButtonHTMLAttributes } from 'react'
-import { tokens } from '@supersummary-ui/tokens'
+import { tokens } from 'supersummary-tokens'
 import './styles.css'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

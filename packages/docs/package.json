@@ -1,5 +1,5 @@
 {
-  "name": "@supersummary-ui/docs",
+  "name": "supersummary-docs",
   "private": true,
   "version": "1.0.1",
   "main": "./dist/index.js",
@@ -12,7 +12,7 @@
     "test": "echo \"No tests needed for documentation package\" && exit 0"
   },
   "dependencies": {
-    "@supersummary-ui/react": "workspace:*",
+    "supersummary-react": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

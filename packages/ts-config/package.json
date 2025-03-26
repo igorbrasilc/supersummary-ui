@@ -1,6 +1,7 @@
 {
-  "name": "@supersummary-ui/ts-config",
+  "name": "supersummary-ts-config",
   "version": "1.0.0",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"No tests needed for TypeScript configuration package\" && exit 0"
