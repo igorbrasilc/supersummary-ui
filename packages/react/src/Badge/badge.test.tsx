@@ -13,13 +13,13 @@ describe('Badge Component', () => {
   it('should render with primary variant by default', () => {
     const { container } = render(<Badge>Primary Badge</Badge>);
     const badge = container.firstChild as HTMLElement;
-    expect(badge).toHaveClass('badge-primary');
+    expect(badge.getAttribute('data-testid')).toBe('global-badge');
   });
 
   it('should render with error variant', () => {
-    const { container } = render(<Badge variant="error">Error Badge</Badge>);
-    const badge = container.firstChild as HTMLElement;
-    expect(badge).toHaveClass('badge-error');
+    const { getByTestId } = render(<Badge variant="error">Error Badge</Badge>);
+    const badge = getByTestId('global-badge');
+    expect(badge).toBeInTheDocument();
   });
 
   it('should render with data-cy attribute', () => {

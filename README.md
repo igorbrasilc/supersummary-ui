@@ -16,15 +16,16 @@ Internal packages not published to npm:
 
 ## Installation
 
+- To install React app:
+
 ```bash
-# With npm
-npm install supersummary-react
+npm/yarn/pnpm install supersummary-react
+```
 
-# With yarn
-yarn add supersummary-react
+- To install Tokens:
 
-# With pnpm
-pnpm add supersummary-react
+```bash
+npm/yarn/pnpm install supersummary-tokens
 ```
 
 ## Quick Start
@@ -46,38 +47,28 @@ function App() {
 
 ```bash
 # Run all tests (non-watch mode)
-pnpm test
-# or
 make test
 
 # Run tests in watch mode
-pnpm test:watch
-# or
 make test-watch
 
 # Run tests with coverage
-pnpm test -- --coverage
-# or
 make test-coverage
 
 # Test a specific package
-pnpm --filter @supersummary-ui/react test
-# or
 make test-pkg PKG=react
 ```
 
 ### GitHub Actions Automated Publishing
 
-//TODO: create a workflow for a branch homolog (that should be merged before going to prod) 
+//TODO: create a workflow for a branch homolog (that should be merged before going to prod)
+
 This repository is configured with GitHub Actions for automated releases:
 
 1. When changes are pushed to the `main` branch, the release workflow runs
 2. If there are changesets, it either:
    - Creates a PR with version changes (if not on `main`)
    - Publishes the packages directly to npm (if on `main`)
-
-**Required GitHub Secrets**:
-- `NPM_TOKEN`: Your NPM authentication token
 
 ## Technologies
 
@@ -89,6 +80,7 @@ This repository is configured with GitHub Actions for automated releases:
 - **CSS Modules**: Component styling
 - **Changesets**: Version management and changelog generation
 - **Husky & lint-staged**: Git hooks and pre-commit checks
+- **Material UI**: Open-source library of components
 
 ## Project Structure
 
@@ -119,8 +111,6 @@ git clone https://github.com/your-org/supersummary-ui.git
 cd supersummary-ui
 
 # Install dependencies
-pnpm install
-# or
 make install
 ```
 
@@ -129,15 +119,9 @@ make install
 Run the development server:
 
 ```bash
-# Using pnpm:
 # Run all packages in development mode
-pnpm dev
-
-# Run a specific package in development mode
-pnpm --filter @supersummary-ui/react dev
-
-# Using Make:
 make dev                # All packages
+# Run a specific package in development mode
 make dev-pkg PKG=react  # Specific package
 make storybook          # Run Storybook documentation
 ```
@@ -145,41 +129,27 @@ make storybook          # Run Storybook documentation
 Build the packages:
 
 ```bash
-# Using pnpm:
 # Build all packages
-pnpm build
+make build                # All packages
 
 # Build a specific package
-pnpm --filter @supersummary-ui/react build
-
-# Using Make:
-make build                # All packages
 make build-pkg PKG=react  # Specific package
 ```
 
 Run tests:
 
 ```bash
-# Using pnpm:
 # Run all tests
-pnpm test
+make test                # All packages
 
 # Run tests for a specific package
-pnpm --filter @supersummary-ui/react test
-
-# Using Make:
-make test                # All packages
 make test-pkg PKG=react  # Specific package
 ```
 
 Run tests with coverage:
 
 ```bash
-# Using pnpm:
 # Run all tests with coverage
-pnpm test -- --coverage
-
-# Using Make:
 make test-coverage                # All packages
 make test-coverage-pkg PKG=react  # Specific package
 ```
@@ -187,12 +157,14 @@ make test-coverage-pkg PKG=react  # Specific package
 ## Test Coverage Requirements
 
 This project enforces a minimum test coverage threshold of 80% for:
+
 - Statements
 - Branches
 - Functions
 - Lines
 
 These thresholds are checked:
+
 1. When running tests with the `--coverage` flag
 2. Automatically before each commit (via pre-commit hook)
 
@@ -202,23 +174,23 @@ If test coverage falls below the threshold, the pre-commit hook will fail and pr
 
 For convenience, a Makefile is provided with common commands:
 
-| Command | Description |
-|---------|-------------|
-| `make install` | Install dependencies |
-| `make build` | Build all packages |
-| `make dev` | Run development servers |
-| `make test` | Run all tests |
-| `make test-coverage` | Run tests with coverage report |
-| `make storybook` | Run Storybook documentation |
-| `make lint` | Run linting |
-| `make clean` | Clean build artifacts |
-| `make changeset` | Create a changeset |
-| `make version` | Apply versions from changesets |
-| `make publish` | Build and publish packages |
-| `make build-pkg PKG=react` | Build a specific package |
-| `make test-pkg PKG=react` | Test a specific package |
+| Command                            | Description                              |
+| ---------------------------------- | ---------------------------------------- |
+| `make install`                     | Install dependencies                     |
+| `make build`                       | Build all packages                       |
+| `make dev`                         | Run development servers                  |
+| `make test`                        | Run all tests                            |
+| `make test-coverage`               | Run tests with coverage report           |
+| `make storybook`                   | Run Storybook documentation              |
+| `make lint`                        | Run linting                              |
+| `make clean`                       | Clean build artifacts                    |
+| `make changeset`                   | Create a changeset                       |
+| `make version`                     | Apply versions from changesets           |
+| `make publish`                     | Build and publish packages               |
+| `make build-pkg PKG=react`         | Build a specific package                 |
+| `make test-pkg PKG=react`          | Test a specific package                  |
 | `make test-coverage-pkg PKG=react` | Run test coverage for a specific package |
-| `make dev-pkg PKG=react` | Development for a specific package |
+| `make dev-pkg PKG=react`           | Development for a specific package       |
 
 ## Version Management with Changesets
 
@@ -230,37 +202,16 @@ After making changes to components or adding new features:
 
 ```bash
 # Create a new changeset
-pnpm changeset
-# or
 make changeset
 ```
 
 This interactive command will:
+
 1. Ask which packages you've changed
 2. Ask what type of version change it is (major, minor, patch)
 3. Ask for a summary of the changes
 
 A markdown file will be created in the `.changeset` directory.
-
-### Releasing Changes
-
-When you're ready to release:
-
-```bash
-# Using pnpm:
-# Version packages based on changesets
-pnpm changeset version
-
-# Build all packages before publishing
-pnpm build
-
-# Publish packages to npm
-pnpm changeset publish
-
-# Using Make:
-make version   # Update versions
-make publish   # Build and publish
-```
 
 ## Creating a New Component
 
@@ -275,7 +226,6 @@ packages/react/src/YourComponent/
 ├── index.tsx            # Main component code
 ├── interfaces/          # TypeScript interfaces
 │   └── index.ts         # Exported interfaces
-├── styles.css           # Component styles
 └── yourcomponent.test.tsx     # Component tests
 ```
 
@@ -306,8 +256,8 @@ Create CSS styles in `styles.css`:
 
 .your-component-primary {
   /* Primary variant styles */
-  background-color: #007AFF;
-  color: #FFF;
+  background-color: #007aff;
+  color: #fff;
 }
 
 /* Add more variant styles as needed */
@@ -323,15 +273,15 @@ import { YourComponentProps } from './interfaces'
 import { tokens } from '@supersummary-ui/tokens'
 import './styles.css'
 
-export const YourComponent = ({ 
-  children, 
+export const YourComponent = ({
+  children,
   variant = 'primary',
-  ...props 
+  ...props
 }: YourComponentProps) => {
   return (
-    <div 
+    <div
       className={`your-component your-component-${variant}`}
-      data-cy="your-component" 
+      data-cy="your-component"
       {...props}
     >
       {children}
@@ -367,7 +317,7 @@ Add the component to the main export file in `packages/react/src/index.tsx`:
 
 ```typescript
 // ... existing exports
-export * from './YourComponent'
+export * from './YourComponent';
 ```
 
 ### 7. Create a Storybook Story
@@ -392,7 +342,7 @@ const meta: Meta<typeof YourComponent> = {
     },
     children: {
       control: 'text',
-    }
+    },
   },
 };
 
@@ -412,58 +362,24 @@ export const Primary: Story = {
 Document your changes:
 
 ```bash
-pnpm changeset
+make changeset
 ```
 
 Describe what you've changed and select the appropriate version bump.
 
 ### 9. Build and Test
 
-Run the build and test commands to ensure everything works:
+Run the build and test commands on `packages/react` folder to ensure everything works:
 
 ```bash
 # Build the react package
-pnpm --filter @supersummary-ui/react build
+make build
 
 # Run tests
-pnpm --filter @supersummary-ui/react test
+make test
 
 # Start Storybook to view your component
-pnpm --filter @supersummary-ui/docs dev
-```
-
-## Example Components
-
-### Button Component
-
-A customizable button component with different variants:
-
-```tsx
-import { Button } from '@supersummary-ui/react'
-
-// Basic usage
-<Button>Click Me</Button>
-
-// With disabled state
-<Button disabled>Disabled</Button>
-```
-
-### Badge Component
-
-A badge component with multiple variants:
-
-```tsx
-import { Badge } from '@supersummary-ui/react'
-
-// Basic usage
-<Badge>Default</Badge>
-
-// With different variants
-<Badge variant="primary">Primary</Badge>
-<Badge variant="secondary">Secondary</Badge>
-<Badge variant="error">Error</Badge>
-<Badge variant="warning">Warning</Badge>
-<Badge variant="success">Success</Badge>
+make dev
 ```
 
 ## Best Practices
@@ -479,4 +395,4 @@ import { Badge } from '@supersummary-ui/react'
 
 ## License
 
-MIT 
+MIT
