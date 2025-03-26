@@ -1,6 +1,6 @@
 {
   "name": "supersummary-ui",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
