@@ -11,7 +11,8 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "pnpm build && changeset publish",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "eslint": "eslint"
   },
   "workspaces": [
     "packages/*"
@@ -25,15 +26,21 @@
     "*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write",
       "eslint --fix"
+    ],
+    "packages/react/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
     ]
   },
   "author": "",
   "license": "ISC",
   "description": "",
+  "type": "module",
   "devDependencies": {
     "@changesets/cli": "^2.28.1",
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
+    "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.5",
     "husky": "^8.0.0",

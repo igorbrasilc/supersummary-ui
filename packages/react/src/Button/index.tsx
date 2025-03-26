@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { ButtonHTMLAttributes } from 'react'
-import { tokens } from 'supersummary-tokens'
-import './styles.css'
+import * as React from 'react';
+import { ButtonHTMLAttributes } from 'react';
+import { tokens } from 'supersummary-tokens';
+import './styles.css';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -9,8 +9,8 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button = ({ children, ...props }: ButtonProps) => {
   return (
-    <button 
-      className="button" 
+    <button
+      className="button"
       style={{
         backgroundColor: props.disabled ? '#ccc' : tokens.colors.primary,
         color: tokens.colors.white,
@@ -19,5 +19,5 @@ export const Button = ({ children, ...props }: ButtonProps) => {
     >
       {children}
     </button>
-  )
-} 
+  );
+};

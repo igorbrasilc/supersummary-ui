@@ -27,9 +27,10 @@
     "@testing-library/react": "^16.2.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "eslint": "^9.23.0",
+    "jsdom": "^26.0.0",
     "tsup": "^8.0.2",
-    "vitest": "^3.0.9",
-    "jsdom": "^26.0.0"
+    "vitest": "^3.0.9"
   },
   "dependencies": {
     "supersummary-tokens": "workspace:*"

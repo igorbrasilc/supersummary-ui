@@ -1,0 +1,17 @@
+# Build output directories
+**/dist/**
+**/build/**
+
+# Node modules
+node_modules/
+
+# Coverage directory
+coverage/
+
+# Temp files
+.tmp/
+.cache/
+
+# Other common exclusions
+**/*.min.js
+**/*.bundle.js

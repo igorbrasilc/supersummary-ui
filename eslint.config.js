@@ -1,4 +1,4 @@
-import { defineConfig } from 'eslint/config';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import react from 'eslint-plugin-react';
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import prettier from 'eslint-plugin-prettier';
@@ -18,6 +18,7 @@ const compat = new FlatCompat({
 });
 
 export default defineConfig([
+  globalIgnores(['**/node_modules/**', '**/dist/**']),
   {
     extends: compat.extends(
       'eslint:recommended',
