@@ -1,5 +1,11 @@
 # @supersummary-ui/react
 
+## 1.2.0
+
+### Minor Changes
+
+- creates Avatar component for the lib
+
 ## 1.1.1
 
 ### Patch Changes

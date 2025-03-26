@@ -243,25 +243,7 @@ export interface YourComponentProps {
 }
 ```
 
-### 3. Create the Component Styles
-
-Create CSS styles in `styles.css`:
-
-```css
-.your-component {
-  /* Base styles */
-  padding: 4px 8px;
-  /* More styles... */
-}
-
-.your-component-primary {
-  /* Primary variant styles */
-  background-color: #007aff;
-  color: #fff;
-}
-
-/* Add more variant styles as needed */
-```
+### 3. Style the component using styled-components
 
 ### 4. Implement the Component
 
