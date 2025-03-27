@@ -1,5 +1,11 @@
 # @supersummary-ui/react
 
+## 1.2.1
+
+### Patch Changes
+
+- removes styled-components lib
+
 ## 1.2.0
 
 ### Minor Changes
