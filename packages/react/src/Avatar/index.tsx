@@ -3,8 +3,6 @@ import { AvatarProps } from './interfaces';
 import styled from '@emotion/styled';
 import { tokens } from 'supersummary-tokens';
 
-// Emotion doesn't support transient props like styled-components
-// so we need to manually filter out our custom props
 const StyledAvatar = styled(MUIAvatar, {
   shouldForwardProp: (prop) => prop !== 'clickable',
 })<{ clickable?: boolean }>`

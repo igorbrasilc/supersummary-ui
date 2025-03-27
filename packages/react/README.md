@@ -12,19 +12,10 @@ yarn add supersummary-react
 pnpm add supersummary-react
 ```
 
-## Styling
-
-Components in this library are styled using [styled-components](https://styled-components.com/). This allows for:
-
-- Dynamic styling based on props
-- Theming support
-- Scoped CSS without class name conflicts
-- Easy customization through the styled-components API
-
 ### Example of extending a component style
 
 ```tsx
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { Button } from 'supersummary-react';
 
 const CustomButton = styled(Button)`

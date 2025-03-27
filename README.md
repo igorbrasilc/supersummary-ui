@@ -243,7 +243,7 @@ export interface YourComponentProps {
 }
 ```
 
-### 3. Style the component using styled-components
+### 3. Style the component using styled from @emotion/styled
 
 ### 4. Implement the Component
 

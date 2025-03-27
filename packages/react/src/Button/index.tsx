@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ButtonHTMLAttributes } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { tokens } from 'supersummary-tokens';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
