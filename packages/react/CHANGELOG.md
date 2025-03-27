@@ -1,5 +1,11 @@
 # @supersummary-ui/react
 
+## 1.2.2
+
+### Patch Changes
+
+- fix peer dependencies
+
 ## 1.2.1
 
 ### Patch Changes
