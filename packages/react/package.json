@@ -13,14 +13,18 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react --external @emotion/react --external @emotion/styled --external @mui/material --external @mui/styled-engine",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --external @emotion/react --external @emotion/styled --external @mui/material --external @mui/styled-engine --watch",
     "test": "vitest run",
     "test:watch": "vitest"
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^5.0.0",
+    "@mui/styled-engine": "^7.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
